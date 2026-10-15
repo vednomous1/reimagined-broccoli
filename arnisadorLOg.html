@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAU Arnis Team | Members Login</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --lime: #a3ff12;
+        --white: #ffffff;
+        --gray: #b8c1ba;
+        --dark: #07100b;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--white);
+
+        background:
+          linear-gradient(90deg, rgba(3, 10, 6, 0.78), rgba(3, 10, 6, 0.7)),
+          url("backgroundLOg.jpg") center / cover no-repeat fixed;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 35px;
+      }
+
+      .login-container {
+        width: 100%;
+        max-width: 1050px;
+        min-height: 570px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid rgba(163, 255, 18, 0.25);
+        border-radius: 20px;
+        overflow: hidden;
+        background: rgba(5, 14, 8, 0.68);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      }
+
+      .brand-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 45px;
+        border-right: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .logo-box {
+        width: 190px;
+        height: 190px;
+        border: 2px solid var(--lime);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 30px rgba(163, 255, 18, 0.12);
+      }
+
+      .logo-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 10px;
+      }
+
+      .logo-placeholder {
+        color: var(--lime);
+        font-size: 54px;
+        font-weight: 900;
+        letter-spacing: -3px;
+      }
+
+      .brand-side h1 {
+        font-size: clamp(25px, 3vw, 38px);
+        font-weight: 900;
+        letter-spacing: 2px;
+        line-height: 1.2;
+      }
+
+      .brand-side h1 span {
+        color: var(--lime);
+      }
+
+      .brand-side p {
+        color: var(--gray);
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-top: 14px;
+        line-height: 1.8;
+      }
+
+      .brand-line {
+        width: 65px;
+        height: 4px;
+        background: var(--lime);
+        margin-top: 25px;
+      }
+
+      .brand-caption {
+        margin-top: 25px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: var(--lime);
+        font-weight: bold;
+      }
+
+      .form-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 55px;
+      }
+
+      .form-label {
+        color: var(--lime);
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-weight: bold;
+        margin-bottom: 14px;
+      }
+
+      .form-side h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        color: var(--gray);
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 32px;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: #e4e9e5;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+        border-radius: 8px;
+        color: var(--white);
+        font-size: 14px;
+        outline: none;
+        transition: 0.25s;
+      }
+
+      .input-group input:focus {
+        border-color: var(--lime);
+        box-shadow: 0 0 0 3px rgba(163, 255, 18, 0.08);
+      }
+
+      .input-group input::placeholder {
+        color: #879188;
+      }
+
+      .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin: 4px 0 25px;
+        font-size: 12px;
+      }
+
+      .remember {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--gray);
+      }
+
+      .remember input {
+        accent-color: var(--lime);
+      }
+
+      .form-options a {
+        color: var(--lime);
+        text-decoration: none;
+      }
+
+      .login-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background: var(--lime);
+        color: #071005;
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.25s;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .login-button:hover {
+        background: #c0ff5b;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(163, 255, 18, 0.15);
+      }
+
+      .members-note {
+        text-align: center;
+        color: var(--gray);
+        font-size: 11px;
+        margin-top: 25px;
+        line-height: 1.8;
+      }
+
+      .members-note span {
+        color: var(--lime);
+      }
+
+      .footer {
+        text-align: center;
+        color: #929b94;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 35px;
+      }
+
+      @media (max-width: 850px) {
+        body {
+          padding: 20px;
+        }
+
+        .login-container {
+          max-width: 520px;
+          grid-template-columns: 1fr;
+        }
+
+        .brand-side {
+          padding: 35px 20px;
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .logo-box {
+          width: 115px;
+          height: 115px;
+          margin-bottom: 20px;
+        }
+
+        .logo-placeholder {
+          font-size: 38px;
+        }
+
+        .brand-side p {
+          margin-top: 10px;
+        }
+
+        .brand-line,
+        .brand-caption {
+          display: none;
+        }
+
+        .form-side {
+          padding: 35px 28px;
+        }
+
+        .form-side h2 {
+          font-size: 28px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        body {
+          padding: 10px;
+        }
+
+        .form-side {
+          padding: 28px 20px;
+        }
+
+        .form-options {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="login-container">
+      <section class="brand-side">
+        <div class="logo-box">
+          <img
+            src="arnislogo.jpg"
+            alt="TAU Arnis Team Logo"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'block';
+            "
+          />
+
+          <div class="logo-placeholder" style="display: none">TAU</div>
+        </div>
+
+        <h1>TAU <span>ARNIS</span><br />TEAM</h1>
+
+        <p>
+          TARLAC AGRICULTURAL UNIVERSITY<br />
+          ARNIS TEAM
+        </p>
+
+        <div class="brand-line"></div>
+
+        <div class="brand-caption">DISCIPLINE BUILDS CHAMPIONS</div>
+      </section>
+
+      <section class="form-side">
+        <div class="form-label">OFFICIAL TEAM PORTAL</div>
+
+        <h2>Member Login</h2>
+
+        <p class="subtitle">
+          Welcome back, Arnisador.<br />
+          Sign in to access your team account.
+        </p>
+
+        <form action="#" method="post">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your team email"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <div class="form-options">
+            <label class="remember">
+              <input type="checkbox" name="remember" />
+              Remember me
+            </label>
+
+            <a href="contact.html">Need help?</a>
+          </div>
+
+          <a
+            href="https://m.me/j/AbYvrZf1nvdFqoj9/?send_source=gc%3Acopy_invite_link"
+            class="login-button"
+          >
+            SIGN IN →
+          </a>
+        </form>
+
+        <p class="register-link">
+          Don't have an account? <a href="register.html">Register</a>
+        </p>
+
+        <p class="members-note">
+          <span> MEMBERS ONLY</span><br />
+          Authorized TAU Arnis Team members only. not avaible.
+        </p>
+
+        <div class="footer">
+          © 2026 TAU Arnis Team. All rights reserved. not available.
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

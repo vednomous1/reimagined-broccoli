@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | TAU Arnis Team</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(241, 241, 241, 0.82), rgba(241, 241, 241, 0.82)), url("newbanner2.jpg") center / cover fixed;
+            color: #101810;
+        }
+
+        header {
+            background: #061b0c;
+            color: white;
+            padding: 25px 8%;
+            border-bottom: 4px solid #aaff00;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .team-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        header h1 {
+            color: #aaff00;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 8px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #102b14;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #69a900;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #061b0c, #12632b);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .team-banner {
+            display: block;
+            width: min(100%, 1100px);
+            max-height: 320px;
+            object-fit: cover;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            color: #aaff00;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        section {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #12632b;
+            margin-bottom: 18px;
+        }
+
+        section p {
+            line-height: 1.7;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 20px;
+            border-radius: 10px;
+            border-top: 4px solid #aaff00;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #12632b;
+            font-size: 36px;
+        }
+
+        .achievement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .achievement-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border-top: 4px solid #aaff00;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .achievement-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .achievement-item .info {
+            padding: 20px 18px 24px;
+        }
+
+        .achievement-item h3 {
+            color: #12632b;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .achievement-item p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        #contact {
+            background: #e1e8df;
+        }
+
+        footer {
+            background: #061b0c;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        footer span {
+            color: #aaff00;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img class="team-logo" src="arnislogo.jpg" alt="TAU Arnis Team logo">
+        <div class="header-text">
+            <h1>TAU ARNIS TEAM</h1>
+            <p>DISCIPLINE • SKILL • UNITY</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="ArnisH2.html">HOME</a>
+        <a href="achievements.html">ACHIEVEMENTS</a>
+        <a href="ArnisGallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <img class="team-banner" src="newbanner2.jpg" alt="SCUAA Region III 2026 event poster">
+            <h2>ACHIEVEMENTS</h2>
+            <p>
+                Celebrating the dedication, discipline, and competitive
+                spirit of the TAU Arnis Team at SCUAA Region III 2026.
+            </p>
+        </section>
+
+        <section>
+            <h2>TEAM HIGHLIGHTS</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>11</h3>
+                    <p>MEDALISTS</p>
+                </div>
+
+                <div class="card">
+                    <h3>2</h3>
+                    <p>GOLD MEDALS</p>
+                </div>
+
+                <div class="card">
+                    <h3>10</h3>
+                    <p>BRONZE MEDALS</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>OUR MEDALISTS</h2>
+            <div class="achievement-list">
+                <article class="achievement-item">
+                    <img src="jeremiah.jpg" alt="Jeremiah G. Clemente">
+                    <div class="info">
+                        <h3>Jeremiah G. Clemente</h3>
+                        <p>🥇 Gold — Live Stick (Light Weight)</p>
+                        <p>🥉 Bronze — Padded Stick (Light Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="jones.jpg" alt="Jones Lee M. Paguirigan">
+                    <div class="info">
+                        <h3>Jones Lee M. Paguirigan</h3>
+                        <p>🥇 Gold — Live Stick (Half Light Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="johnallen.jpg" alt="John Allen V. Sicangco">
+                    <div class="info">
+                        <h3>John Allen V. Sicangco</h3>
+                        <p>🥉 Bronze — Live Stick (Half Middle Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="paul.jpg" alt="Paul Zedrich T. Estrada">
+                    <div class="info">
+                        <h3>Paul Zedrich T. Estrada</h3>
+                        <p>🥉 Bronze — Live Stick</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="cholo.jpg" alt="Cholo S. Aquino">
+                    <div class="info">
+                        <h3>Cholo S. Aquino</h3>
+                        <p>🥉 Bronze — Live Stick (Pin Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="johnpaul.jpg" alt="John Paul S. Dacalanio">
+                    <div class="info">
+                        <h3>John Paul S. Dacalanio</h3>
+                        <p>🥉 Bronze — Padded Stick (Pin Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="mark.jpg" alt="Mark Jeazon B. Villaver">
+                    <div class="info">
+                        <h3>Mark Jeazon B. Villaver</h3>
+                        <p>🥉 Bronze — Live Stick (Open Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="kevin.jpg" alt="Mark Kevin DC. Corpuz">
+                    <div class="info">
+                        <h3>Mark Kevin DC. Corpuz</h3>
+                        <p>🥉 Bronze — Padded Stick (Heavy Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="romer.jpg" alt="Romer B. Camilet">
+                    <div class="info">
+                        <h3>Romer B. Camilet</h3>
+                        <p>🥉 Bronze — Padded Stick (Extra Light Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="ashley.jpg" alt="Ashley Dheil F. Contreras">
+                    <div class="info">
+                        <h3>Ashley Dheil F. Contreras</h3>
+                        <p>🥉 Bronze — Padded Stick (Light Weight)</p>
+                    </div>
+                </article>
+
+                <article class="achievement-item">
+                    <img src="krissa.jpg" alt="Krissa Mae R. Dangil">
+                    <div class="info">
+                        <h3>Krissa Mae R. Dangil</h3>
+                        <p>🥉 Bronze — Padded Stick (Pin Weight)</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>MORE THAN MEDALS</h2>
+            <p>
+                We compete with discipline, grow through challenges,
+                and stand together as one team.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p><span>TAU ARNIS TEAM</span></p>
+        <p>© 2026 TAU Arnis Team. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
